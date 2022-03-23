@@ -1,7 +1,7 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, Pair } from '@daoswapdex/daoswap-dex-sdk'
 import { useMemo } from 'react'
 // ERC20
-import { SAD, DAT, DST, DTC1, DTC2 } from '../../constants/tokensInfo'
+import { SAD, DAT, DST } from '../../constants/tokensInfo'
 import { STAKING_REWARDS_INTERFACE } from '../../constants/abis/staking-rewards'
 import { useActiveWeb3React } from '../../hooks'
 import { NEVER_RELOAD, useMultipleContractSingleData } from '../multicall/hooks'
@@ -9,10 +9,10 @@ import { tryParseAmount } from '../swap/hooks'
 import { useTranslation } from 'react-i18next'
 
 // Start Time
-export const STAKING_GENESIS = 1648004400
+export const STAKING_GENESIS = 1648039800
 
 // Rewards Duration : unit - day
-export const REWARDS_DURATION_DAYS = 28
+export const REWARDS_DURATION_DAYS = 14
 
 // TODO add staking rewards addresses here
 export const STAKING_REWARDS_INFO: {
@@ -24,13 +24,7 @@ export const STAKING_REWARDS_INFO: {
   [ChainId.BSC_TESTNET]: [
     {
       tokens: [DAT[ChainId.BSC_TESTNET], DST[ChainId.BSC_TESTNET]],
-      stakingRewardAddress: '0x064919FdFA8522B6d0F539ab5132541fcc234854'
-    }
-  ],
-  [ChainId.HECO_TESTNET]: [
-    {
-      tokens: [DTC1[ChainId.HECO_TESTNET], DTC2[ChainId.HECO_TESTNET]],
-      stakingRewardAddress: '0x749652688D86904233e10ab2c1190257E5e45819'
+      stakingRewardAddress: '0xAF3B86C625C0585f63C5246cc90ECb00c6A98556'
     }
   ]
 }
