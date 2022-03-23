@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import { AutoColumn } from '../Column'
 
-import uImage from '../../assets/images/big_unicorn.png'
-
 export const TextBox = styled.div`
   display: flex;
   align-items: center;
@@ -15,7 +13,7 @@ export const TextBox = styled.div`
 `
 
 export const DataCard = styled(AutoColumn)<{ disabled?: boolean }>`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #93B954 0%, #006600 100%);
+  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #93b954 0%, #8b4513 100%);
   border-radius: 12px;
   width: 100%;
   position: relative;
@@ -23,7 +21,6 @@ export const DataCard = styled(AutoColumn)<{ disabled?: boolean }>`
 `
 
 export const CardBGImage = styled.span<{ desaturate?: boolean }>`
-  background: url(${uImage});
   width: 1000px;
   height: 600px;
   position: absolute;

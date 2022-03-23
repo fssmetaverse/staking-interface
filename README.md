@@ -14,3 +14,6 @@ yarn
 yarn start
 ```
 
+### color
+primary: #d2691e
+deep: #8b4513

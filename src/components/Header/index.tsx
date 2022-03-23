@@ -5,15 +5,11 @@ import { darken } from 'polished'
 
 import styled from 'styled-components'
 
-// import Logo from '../../assets/svg/logo.svg'
-// import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
-// import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 import { CURRENCY_SYMBOL } from '@daoswapdex/daoswap-dex-sdk'
 
 import Settings from '../Settings'
-// import Menu from '../Menu'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
@@ -121,27 +117,6 @@ const BalanceText = styled(Text)`
   `};
 `
 
-// const Title = styled.a`
-//   display: flex;
-//   align-items: center;
-//   pointer-events: auto;
-//   justify-self: flex-start;
-//   margin-right: 12px;
-//   ${({ theme }) => theme.mediaWidth.upToSmall`
-//     justify-self: center;
-//   `};
-//   :hover {
-//     cursor: pointer;
-//   }
-// `
-
-// const UniIcon = styled.div`
-//   transition: transform 0.3s ease;
-//   :hover {
-//     transform: rotate(-5deg);
-//   }
-// `
-
 const activeClassName = 'ACTIVE'
 
 const StyledNavLink = styled(NavLink).attrs({
@@ -175,16 +150,10 @@ export default function Header() {
   const { account, chainId } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  // const [isDark] = useDarkModeManager()
 
   return (
     <HeaderFrame>
       <HeaderRow>
-        {/* <Title href=".">
-          <UniIcon>
-            <img width={'24px'} src={isDark ? LogoDark : Logo} alt="logo" />
-          </UniIcon>
-        </Title> */}
         <HeaderLinks>
           <StyledNavLink id={`stake-nav-link`} to={'/stake'}>
             Stake
