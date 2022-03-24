@@ -13,6 +13,7 @@ import Settings from '../Settings'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
+import { useTranslation } from 'react-i18next'
 
 const HeaderFrame = styled.div`
   display: grid;
@@ -147,6 +148,7 @@ const StyledNavLink = styled(NavLink).attrs({
 `
 
 export default function Header() {
+  const { t } = useTranslation()
   const { account, chainId } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
@@ -156,7 +158,7 @@ export default function Header() {
       <HeaderRow>
         <HeaderLinks>
           <StyledNavLink id={`stake-nav-link`} to={'/stake'}>
-            Stake
+            {t('Liquidity Stake')}
           </StyledNavLink>
         </HeaderLinks>
       </HeaderRow>

@@ -1,7 +1,7 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, Pair } from '@daoswapdex/daoswap-dex-sdk'
 import { useMemo } from 'react'
 // ERC20
-import { SAD, DAT, DST } from '../../constants/tokensInfo'
+import { SAD, USDT, DAT, DST } from '../../constants/tokensInfo'
 import { STAKING_REWARDS_INTERFACE } from '../../constants/abis/staking-rewards'
 import { useActiveWeb3React } from '../../hooks'
 import { NEVER_RELOAD, useMultipleContractSingleData } from '../multicall/hooks'
@@ -9,10 +9,10 @@ import { tryParseAmount } from '../swap/hooks'
 import { useTranslation } from 'react-i18next'
 
 // Start Time
-export const STAKING_GENESIS = 1648039800
+export const STAKING_GENESIS = 1648111800
 
 // Rewards Duration : unit - day
-export const REWARDS_DURATION_DAYS = 14
+export const REWARDS_DURATION_DAYS = 16 / 24
 
 // TODO add staking rewards addresses here
 export const STAKING_REWARDS_INFO: {
@@ -21,6 +21,12 @@ export const STAKING_REWARDS_INFO: {
     stakingRewardAddress: string
   }[]
 } = {
+  [ChainId.BSC_MAINNET]: [
+    {
+      tokens: [USDT[ChainId.BSC_MAINNET], SAD[ChainId.BSC_MAINNET]],
+      stakingRewardAddress: '0x5aa1BEFDaDF390Bfe7d61d23C33160Cc7d68eBd9'
+    }
+  ],
   [ChainId.BSC_TESTNET]: [
     {
       tokens: [DAT[ChainId.BSC_TESTNET], DST[ChainId.BSC_TESTNET]],

@@ -1,4 +1,4 @@
-import { ChainId, Token, DAO_ADDRESS, USDC_ADDRESS, USDT_ADDRESS } from '@daoswapdex/daoswap-dex-sdk'
+import { ChainId, Token, USDC_ADDRESS, USDT_ADDRESS } from '@daoswapdex/daoswap-dex-sdk'
 
 type TokenMap = {
   readonly [chainId in ChainId]: Token
@@ -19,10 +19,22 @@ export const USDC: TokenMap = {
 }
 
 export const SAD: TokenMap = {
-  [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, DAO_ADDRESS[ChainId.BSC_MAINNET], 18, 'SAD', 'SAD'),
-  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, DAO_ADDRESS[ChainId.BSC_TESTNET], 18, 'SAD', 'SAD'),
-  [ChainId.HECO_MAINNET]: new Token(ChainId.HECO_MAINNET, DAO_ADDRESS[ChainId.HECO_MAINNET], 18, 'SAD', 'SAD'),
-  [ChainId.HECO_TESTNET]: new Token(ChainId.HECO_TESTNET, DAO_ADDRESS[ChainId.HECO_TESTNET], 18, 'SAD', 'SAD')
+  [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, '0x3A164676FB4E19c0f4E9cB72B3003c00D3700C4D', 18, 'SAD', 'SAD'),
+  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, '0x3A164676FB4E19c0f4E9cB72B3003c00D3700C4D', 18, 'SAD', 'SAD'),
+  [ChainId.HECO_MAINNET]: new Token(
+    ChainId.HECO_MAINNET,
+    '0x3A164676FB4E19c0f4E9cB72B3003c00D3700C4D',
+    18,
+    'SAD',
+    'SAD'
+  ),
+  [ChainId.HECO_TESTNET]: new Token(
+    ChainId.HECO_TESTNET,
+    '0x3A164676FB4E19c0f4E9cB72B3003c00D3700C4D',
+    18,
+    'SAD',
+    'SAD'
+  )
 }
 
 export const DAT: TokenMap = {
