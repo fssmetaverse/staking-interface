@@ -280,7 +280,7 @@ export default function Manage({
                     padding="8px"
                     borderRadius="8px"
                     width="fit-content"
-                    style={{ color: '#006400' }}
+                    style={{ color: '#d2691e' }}
                     onClick={() => setShowClaimRewardModal(true)}
                   >
                     {t('Claim')}
