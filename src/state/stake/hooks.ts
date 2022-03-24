@@ -9,10 +9,10 @@ import { tryParseAmount } from '../swap/hooks'
 import { useTranslation } from 'react-i18next'
 
 // Start Time
-export const STAKING_GENESIS = 1648111800
+export const STAKING_GENESIS = 1648125600
 
 // Rewards Duration : unit - day
-export const REWARDS_DURATION_DAYS = 16 / 24
+export const REWARDS_DURATION_DAYS = 1
 
 // TODO add staking rewards addresses here
 export const STAKING_REWARDS_INFO: {
@@ -24,7 +24,7 @@ export const STAKING_REWARDS_INFO: {
   [ChainId.BSC_MAINNET]: [
     {
       tokens: [USDT[ChainId.BSC_MAINNET], SAD[ChainId.BSC_MAINNET]],
-      stakingRewardAddress: '0x5aa1BEFDaDF390Bfe7d61d23C33160Cc7d68eBd9'
+      stakingRewardAddress: '0x73681CBAf1543Ec71e80376F2bBDd2119cdd24FA'
     }
   ],
   [ChainId.BSC_TESTNET]: [

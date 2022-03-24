@@ -2,7 +2,7 @@ import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { STAKING_REWARDS_INFO, useStakingInfo } from '../../state/stake/hooks'
-import { TYPE } from '../../theme'
+// import { TYPE } from '../../theme'
 import PoolCard from '../../components/earn/PoolCard'
 import { RowBetween } from '../../components/Row'
 import { Countdown } from './Countdown'
@@ -40,8 +40,8 @@ export default function Earn() {
   return (
     <PageWrapper gap="lg" justify="center">
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
-        <DataRow style={{ alignItems: 'baseline' }}>
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>{t('Participating pools')}</TYPE.mediumHeader>
+        <DataRow style={{ alignItems: 'center', justifyContent: 'center' }}>
+          {/* <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>{t('Participating pools')}</TYPE.mediumHeader> */}
           {stakingRewardsExist && stakingInfos?.length === 0 ? null : !stakingRewardsExist ? null : (
             <Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />
           )}
