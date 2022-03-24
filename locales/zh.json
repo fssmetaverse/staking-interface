@@ -318,6 +318,8 @@
   "Total Supply": "总发行量",
   "View SAD Analytics": "查看SAD分析",
   "Claim SAD": "提取SAD",
+  
+  "changeLanguage": "切换语言",
 
   "SAD Stake Activity": "进行中",
   "SAD Stake Innovation": "创新",
@@ -329,5 +331,7 @@
 
   "Governace": "治理节点",
   "Pledging SAD to share 0.1% fees of all pool.": "质押SAD成为社区治理节点，分全平台手续费。",
-  "Function development, please wait patiently...": "功能开发中，请耐心等待..."
+  "Function development, please wait patiently...": "功能开发中，请耐心等待...",
+
+  "Liquidity Stake": "流动性挖矿"
 }

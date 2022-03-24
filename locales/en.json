@@ -333,6 +333,8 @@
   "Total Supply": "Total Supply",
   "View SAD Analytics": "View SAD Analytics",
   "Claim SAD": "Claim SAD",
+  
+  "changeLanguage": "ChangeLanguage",
 
   "SAD Stake Activity": "Activity",
   "SAD Stake Innovation": "Innovation",
@@ -344,5 +346,7 @@
 
   "Governace": "Governace",
   "Pledging SAD to share 0.1% fees of all pool.": "Pledging SAD to share 0.1% fees of all pool.",
-  "Function development, please wait patiently...": "Function development, please wait patiently..."
+  "Function development, please wait patiently...": "Function development, please wait patiently...",
+
+  "Liquidity Stake": "Liquidity"
 }
