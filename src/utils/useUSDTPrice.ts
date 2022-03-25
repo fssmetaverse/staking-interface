@@ -1,4 +1,4 @@
-import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@daoswapdex/daoswap-dex-sdk'
+import { Currency, currencyEquals, JSBI, Price, WETH } from '@daoswapdex/daoswap-dex-sdk'
 import { useMemo } from 'react'
 import { USDT } from '../constants/tokensInfo'
 import { PairState, usePairs } from '../data/Reserves'
@@ -18,11 +18,8 @@ export default function useUSDTPrice(currency?: Currency): Price | undefined {
         chainId && wrapped && currencyEquals(WETH[chainId], wrapped) ? undefined : currency,
         chainId ? WETH[chainId] : undefined
       ],
-      [
-        chainId && wrapped?.equals(USDT[chainId]) ? undefined : wrapped,
-        chainId === ChainId.HECO_MAINNET ? USDT[chainId] : undefined
-      ],
-      [chainId ? WETH[chainId] : undefined, chainId === ChainId.HECO_MAINNET ? USDT[chainId] : undefined]
+      [chainId && wrapped?.equals(USDT[chainId]) ? undefined : wrapped, chainId ? USDT[chainId] : undefined],
+      [chainId ? WETH[chainId] : undefined, chainId ? USDT[chainId] : undefined]
     ],
     [chainId, currency, wrapped]
   )
