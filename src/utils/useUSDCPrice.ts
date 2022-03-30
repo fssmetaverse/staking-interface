@@ -1,4 +1,4 @@
-import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@daoswapdex/daoswap-dex-sdk'
+import { Currency, currencyEquals, JSBI, Price, WETH } from '@daoswapdex/daoswap-dex-sdk'
 import { useMemo } from 'react'
 import { USDC } from '../constants/tokensInfo'
 import { PairState, usePairs } from '../data/Reserves'
